@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Markdown stilleri */
+.markdown-body {
+  @apply text-sm leading-relaxed;
+}
+.markdown-body h1 {
+  @apply text-2xl font-bold my-3;
+}
+.markdown-body h2 {
+  @apply text-xl font-bold my-2;
+}
+.markdown-body h3 {
+  @apply text-lg font-semibold my-2;
+}
+.markdown-body p {
+  @apply my-2;
+}
+.markdown-body ul {
+  @apply list-disc pl-6 my-2;
+}
+.markdown-body ol {
+  @apply list-decimal pl-6 my-2;
+}
+.markdown-body code {
+  @apply bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded text-sm;
+}
+.markdown-body pre {
+  @apply bg-gray-100 dark:bg-gray-800 p-3 rounded-lg overflow-x-auto my-2;
+}
+.markdown-body blockquote {
+  @apply border-l-4 border-blue-500 pl-3 italic text-gray-600 dark:text-gray-400 my-2;
+}
+.markdown-body a {
+  @apply text-blue-500 hover:underline;
+}
