@@ -134,8 +134,8 @@ export async function runAgent(
       });
 
       for (const toolCall of assistantMessage.tool_calls) {
-        const name = toolCall.function.name;
-        const args = JSON.parse(toolCall.function.arguments);
+     const name = (toolCall as any).function.name;
+const args = JSON.parse((toolCall as any).function.arguments);
         steps.push({ type: 'action', content: `Araç çağrılıyor: ${name}(${JSON.stringify(args)})` });
         const output = await executeTool(name, args);
         steps.push({ type: 'observation', content: output });
